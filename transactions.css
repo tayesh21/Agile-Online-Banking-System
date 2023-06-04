@@ -1,0 +1,623 @@
+.page-title {
+  background-color: rgba(4, 49, 54, 255);
+  color: #ffffff;
+  padding: 10px;
+  margin-bottom: 20px;
+}
+
+.container {
+  padding: 20px;
+}
+
+.section {
+  margin-bottom: 20px;
+}
+
+.section-title-bar {
+  background-color: rgba(4, 49, 54, 255);
+  padding: 10px;
+  border-radius: 10px 10px 0 0;
+  width: 100%;
+  margin-bottom: 20px;
+}
+
+.section-title {
+  color: #f1f1f1;
+  font-size: 24px;
+  margin: 0;
+  padding: 0;
+}
+
+.section-content {
+  display: flex;
+}
+
+.left-column,
+.right-column {
+  flex: 1;
+}
+
+.left-column p,
+.right-column p {
+  margin: 5px 0;
+}
+
+.left-column p {
+  text-align: right;
+  margin-right: 10px;
+}
+
+.right-column p {
+  text-align: left;
+  margin-left: 10px;
+}
+
+
+/* Page styles */
+.page-title {
+  color: #ffffff;
+  font-size: 32px;
+  margin-bottom: 30px;
+  text-align: center;
+}
+
+.dropdown-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+label {
+  margin-right: 10px;
+  font-size: 18px;
+}
+
+select {
+  padding: 5px;
+  font-size: 16px;
+}
+
+.transaction-history {
+  background-color: #f4f4f4;
+  padding: 20px;
+  border-radius: 5px;
+}
+
+.transaction-item {
+  margin-bottom: 10px;
+  padding: 10px;
+  background-color: #ffffff;
+  border-radius: 5px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.transaction-item p {
+  margin: 0;
+}
+
+.footer {
+  background-color: #0b7079;
+  color: #ffffff;
+  text-align: center;
+  padding: 5px;
+}
+
+
+
+.footer a:hover {
+  text-decoration: underline;
+}
+
+#hoverup {
+  width: 45%;
+  font-size: 30px;
+  font-family: 'Rajdhani', sans-serif;
+}
+
+.backGroundForTheLogo {
+  background-color: rgba(4, 49, 54, 255);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px 20px;
+}
+
+.left-section {
+  display: flex;
+  align-items: center;
+}
+
+.logo {
+  width: 150px;
+  height: 70px;
+}
+
+.fa-phone {
+  width: 15px;
+  margin-left: 10px;
+  padding-right: 5px;
+}
+
+a.text {
+  color: white;
+  padding-right: 20px;
+}
+
+.right-section {
+  display: flex;
+  align-items: center;
+  margin-left: auto;
+  position: relative;
+}
+
+.contactUs {
+  color: white;
+  margin-right: 38px;
+  font-size: 16px;
+}
+
+.contactUs:hover {
+  text-decoration: underline;
+}
+
+.button {
+  background-color: white;
+  color: green;
+  border-radius: 2px;
+  width: 160px;
+  height: 50px;
+  text-align: center;
+  font-size: 16px;
+  font-family: 'Rajdhani', sans-serif;
+
+}
+
+.button:hover {
+  background-color: #1abc9c;
+  color: white;
+  border: 1px solid #1abc9c;
+}
+
+.findATM {
+  color: white;
+  padding-right: 25px;
+}
+
+.findATM:hover {
+  text-decoration: underline;
+}
+
+nav {
+  background-color: #0b7079;
+  height: 50px;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+nav ul li {
+  margin: 0 10px;
+}
+
+nav ul li a {
+  text-decoration: none;
+  color: #ffffff;
+  font-size: 16px;
+  text-transform: uppercase;
+  padding: 10px 15px;
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
+}
+
+nav ul li a:hover {
+  background-color: #1abc9c;
+}
+
+.section-content .subtitle {
+  /* Styles for the subtitle */
+  font-size: 18px;
+  font-weight: bold;
+  margin-bottom: 10px;
+  margin-right: 20px;
+}
+
+.section-content .btn-container {
+  /* Styles for the button container */
+  margin-top: 5px;
+  text-align: center;
+}
+
+.section-content .try-now-btn {
+  /* Styles for the "Try Now" button */
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: #0b7079;
+  color: white;
+  text-decoration: none;
+  border-radius: 4px;
+  transition: background-color 0.3s ease;
+}
+
+.section-content .try-now-btn:hover {
+  /* Styles when hovering over the button */
+  background-color: #06656e;
+}
+
+.random-class {
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: #0b7079;
+  color: white;
+  text-decoration: none;
+  border-radius: 4px;
+  transition: background-color 0.3s ease;
+  box-shadow: none;
+  
+}
+
+.random-class:hover {
+  background-color: #06656e;
+}
+
+.popup {
+  display: none;
+  position: fixed;
+  z-index: 1;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgba(0, 0, 0, 0.7);
+  overflow: hidden;
+}
+
+.popup-content {
+  background-color: rgba(4, 49, 54, 255);
+  color: white;
+  border-radius: 10px;
+  box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.5);
+  width: 80%;
+  max-width: 500px;
+  margin: 10% auto;
+  padding: 30px;
+  position: relative;
+  animation-name: zoom;
+  animation-duration: 0.3s;
+}
+
+.notification-nav {
+  margin-bottom: 10px;
+}
+
+.notification-nav ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+.notification-nav li {
+  display: inline-block;
+}
+
+.notification-nav a {
+  display: block;
+  padding: 5px 10px;
+  color: white;
+  text-decoration: none;
+}
+
+.notification-nav a.active {
+  background-color: rgba(255, 255, 255, 0.2);
+  border-radius: 5px;
+}
+
+.notification-section {
+  margin-bottom: 20px;
+}
+
+.notification-section h3 {
+  font-size: 18px;
+  margin-top: 0;
+}
+
+.notification-group {
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.notification-group label {
+  margin-left: 5px;
+}
+
+.notification-checkbox {
+  margin-right: 10px;
+}
+
+#mark-read-btn {
+  background-color: #0066cc;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  padding: 10px 20px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+#mark-read-btn:hover {
+  background-color: #003366;
+}
+
+.close {
+  color: #aaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.close:hover,
+.close:focus {
+  color: #0066cf;
+}
+
+.form .label {
+  display: block;
+  margin-bottom: 10px;
+  font-weight: bold;
+  font-size: 16px;
+  text-align: left;
+}
+
+.form .notification-group {
+  margin-bottom: 10px;
+  font-size: 16px;
+  display: flex;
+  align-items: center;
+}
+
+.form .notification-checkbox {
+  margin-right: 10px;
+}
+
+.form .input[type="submit"] {
+  background-color: #0066cc;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  padding: 10px 20px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.form .input[type="submit"]:hover {
+  background-color: #003366;
+}
+
+#success-message {
+  color: #0066cc;
+  font-weight: bold;
+  margin-top: 20px;
+  display: none;
+}
+
+@keyframes zoom {
+  from {
+    transform: scale(0.8);
+  }
+
+  to {
+    transform: scale(1);
+  }
+}
+
+.error-message {
+  color: #ff3333;
+  font-size: 14px;
+  margin-top: 5px;
+  text-align: left;
+}
+
+.input.error {
+  border: 2px solid #ff3333;
+  box-shadow: none;
+}
+
+.input:focus {
+  outline: none;
+  box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+.input:hover {
+  box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+.input:disabled {
+  opacity: 0.5;
+}
+
+.notify:hover {
+  text-decoration: underline;
+}
+
+/* New CSS for Create a Reminder section */
+
+#create-section {
+  display: none;
+}
+
+/* Additional styles for Create a Reminder section */
+.create-reminder-section {
+  margin-bottom: 20px;
+}
+
+.create-reminder-section h3 {
+  font-size: 18px;
+  margin-top: 0;
+}
+
+#create-tab {
+  background-color: rgba(255, 255, 255, 0.2);
+  border-radius: 5px;
+  padding: 5px 10px;
+  color: white;
+  text-decoration: none;
+  margin-right: 10px;
+}
+
+#create-tab:hover {
+  background-color: rgba(255, 255, 255, 0.3);
+}
+
+#create-section .label {
+  margin-top: 10px;
+}
+
+#create-section .input[type="text"],
+#create-section .input[type="date"] {
+  width: 100%;
+  padding: 8px;
+  border-radius: 5px;
+  border: none;
+  background-color: rgba(255, 255, 255, 0.1);
+  color: white;
+  font-size: 16px;
+  margin-bottom: 10px;
+}
+
+#create-section .input[type="submit"] {
+  background-color: #0066cc;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  padding: 10px 20px;
+  cursor: pointer;
+  transition: 0.3s;
+  margin-top: 10px;
+}
+
+#create-section .input[type="submit"]:hover {
+  background-color: #003366;
+}
+
+#create-section #success-message {
+  display: none;
+  margin-top: 10px;
+}
+
+/* CSS for the notification functionality */
+#reminder-section {
+  display: none;
+}
+
+#reminder-section .notification-list {
+  margin: 0;
+}
+
+#reminder-section .notification-item {
+  display: block;
+  background-color: rgba(4, 49, 54, 255);
+  color: white;
+  border-radius: 10px;
+  box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.5);
+  padding: 10px;
+  margin-bottom: 10px;
+}
+
+#reminder-section .notification-title {
+  font-weight: bold;
+}
+
+#reminder-section .notification-due {
+  font-size: 14px;
+}
+
+#reminder-section .notification-message {
+  margin-top: 10px;
+}
+
+/* CSS for the credit card points */
+#credit-card-input {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+#credit-card-input label {
+  font-size: 18px;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+#credit-card-input input[type="text"] {
+  width: 300px;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 16px;
+  margin-bottom: 10px;
+}
+
+#credit-card-input button {
+  padding: 10px 20px;
+  font-size: 16px;
+  font-weight: bold;
+  background-color: darkgreen;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+#credit-card-points {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-family: Arial, sans-serif;
+  font-size: 16px;
+}
+
+table {
+  border-collapse: collapse;
+  width: 100%;
+  margin-top: 20px;
+}
+
+th,
+td {
+  border: 1px solid #ccc;
+  padding: 8px;
+  text-align: center;
+}
+
+th {
+  font-weight: bold;
+}
+
+.redeem-btn {
+  background-color: darkgreen;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  padding: 8px 16px;
+  font-weight: bold;
+}
+
+.redeem-btn:hover {
+  background-color: #006400;
+}

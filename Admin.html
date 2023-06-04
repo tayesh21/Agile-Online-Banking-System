@@ -1,0 +1,364 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <link rel="stylesheet" type="text/css" href="transactions.css">
+</head>
+
+<body>
+    <div class="backGroundForTheLogo">
+        <div class="left-section">
+            <img src="public\playground_assets\logo.png" alt="logo" id="img1" class="logo">
+        </div>
+        <div class="right-section">
+            <a class="text" href="#" style="text-decoration: none;"><span class="notify">Notifications and
+                    Reminders</span></a>
+            <button class="button" onclick="">Login</button>
+        </div>
+    </div>
+    <nav>
+        <ul>
+            <li><a href="BankAdminAccount.html">Summary</a></li>
+            <li><a href="ReportHandling.html">Handle Reports</a></li>
+        </ul>
+    </nav>
+
+    <div id="popup" class="popup">
+        <div class="popup-content">
+            <span class="close">&times;</span>
+            <h2>Notifications</h2>
+            <nav class="notification-nav">
+                <ul>
+                    <li><a href="#" class="active" data-tab="unread">Unread</a></li>
+                    <li><a href="#" data-tab="read">Read</a></li>
+                    <li><a href="#" data-tab="reminder">Create a Reminder</a></li>
+                </ul>
+            </nav>
+            <div class="notification-section" id="unread-section">
+                <h3>Unread Notifications</h3>
+                <div class="notification-list">
+                    <!-- Unread notifications will be dynamically populated here -->
+                </div>
+                <button id="mark-read-btn">Mark as Read</button>
+            </div>
+            <div class="notification-section" id="read-section" style="display: none;">
+                <h3>Read Notifications</h3>
+                <div class="notification-list">
+                    <!-- Read notifications will be dynamically populated here -->
+                </div>
+            </div>
+            <div class="notification-section" id="reminder-section" style="display: none;">
+                <h3>Create a Reminder</h3>
+                <form id="create-reminder-form">
+                    <div class="form-group">
+                        <label for="reminder-title">Title:</label>
+                        <input type="text" id="reminder-title" class="input" />
+                    </div>
+                    <div class="form-group">
+                        <label for="reminder-date">Date:</label>
+                        <input type="date" id="reminder-date" class="input" />
+                    </div>
+                    <input type="submit" value="Submit" class="submit-btn" />
+                </form>
+                <p id="success-message">Reminder created successfully!</p>
+            </div>
+        </div>
+    </div>
+
+    <main>
+        <h2 class="page-title">Bank Admin Summary</h2>
+        <div class="container">
+
+            <div class="section">
+                <div class="section-title-bar">
+                    <h2 class="section-title">Bank Admin Information</h2>
+                </div>
+                <div class="section-content">
+                    <div class="left-column">
+                        <p>Name:</p>
+                        <p>Employee ID:</p>
+                        <p>Role:</p>
+                    </div>
+                    <div class="right-column">
+                        <p>Zeyad Tayesh</p>
+                        <p>789012</p>
+                        <p>Bank Admin</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="section">
+                <div class="section-title-bar">
+                    <h2 class="section-title">Performance Metrics</h2>
+                </div>
+                <div class="section-content">
+                    <div class="left-column">
+                        <p>Employees Managed:</p>
+                        <p>Reports Handled:</p>
+                        <p>Tasks Assigned:</p>
+                    </div>
+                    <div class="right-column">
+                        <p>20</p>
+                        <p>50</p>
+                        <p>30</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="section">
+                <div class="section-title-bar">
+                    <h2 class="section-title">Meeting Summaries</h2>
+                </div>
+                <div class="section-content">
+                    <h3 class="subtitle">Provide brief summaries of recent meetings conducted by the bank administration.</h3>
+                    <div class="meeting-summary">
+                        <h4>Meeting Summary 1</h4>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed auctor enim sit amet risus volutpat
+                            malesuada. Sed vel efficitur lacus. Ut vel aliquet nunc. Nam semper tempor massa, in placerat leo
+                            faucibus a. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae;
+                            Sed dignissim finibus rutrum. Donec et ligula quis dui cursus consequat sed et nisi. Donec a
+                            ultricies tortor.</p>
+                    </div>
+                    <div class="meeting-summary">
+                        <h4>Meeting Summary 2</h4>
+                        <p>Nulla facilisi. Phasellus sodales nisl vitae leo dictum, non ullamcorper dui placerat. Mauris
+                            lacinia erat justo, sit amet fermentum metus commodo vel. Etiam eu sem non urna sodales vehicula ac
+                            id turpis. Sed pharetra nisi quis libero volutpat, id rutrum sem feugiat. Fusce vel elit quis urna
+                            eleifend commodo ac vel orci. Duis fermentum, dui vel vulputate tempor, elit lacus viverra lacus, in
+                            tempus arcu mi ut risus. Mauris tincidunt nibh nec orci efficitur blandit.</p>
+                    </div>
+                    <!-- Add more meeting summaries as needed -->
+                </div>
+            </div>
+            
+
+            <!--  section for viewing pending tasks-->
+            <!-- HTML -->
+            <style>
+                .subtitle2 {
+                    text-align: center;
+                    margin-top: 0;
+                }
+
+                .btn-container {
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+                    margin-top: 10px;
+                }
+
+                .try-now-btn {
+                    padding: 10px 20px;
+                    font-size: 16px;
+                    background-color: #4CAF50;
+                    color: white;
+                    border: none;
+                    border-radius: 4px;
+                    cursor: pointer;
+                }
+
+                .content-item {
+                    margin-bottom: 10px;
+                    padding: 10px;
+                    background-color: #ffffff;
+                    border-radius: 5px;
+                    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+                    width: 300px;
+                    text-align: center;
+                }
+
+                .content-item p {
+                    margin: 0;
+                }
+
+                .reward-message {
+                    font-weight: bold;
+                    color: #4CAF50;
+                }
+            </style>
+
+            <div class="section">
+                <div class="section-title-bar">
+                    <h2 class="section-title">Pending Tasks</h2>
+                </div>
+                <div class="section-content">
+                    <h3 class="subtitle2">View and complete pending tasks assigned to you.</h3>
+                    <div class="btn-container">
+                        <button id="view-tasks-btn" class="try-now-btn">View Tasks</button>
+                        <div id="pending-tasks"></div>
+                    </div>
+                </div>
+            </div>
+
+            <script>
+                var viewTasksBtn = document.getElementById('view-tasks-btn');
+                var pendingTasksDiv = document.getElementById('pending-tasks');
+                var tasks = [
+                    {
+                        title: 'Review Employee Reports',
+                        priority: 'High'
+                    },
+                    {
+                        title: 'Generate Monthly Performance Report',
+                        priority: 'Medium'
+                    },
+                    {
+                        title: 'Assign New Tasks',
+                        priority: 'Low'
+                    }
+                ];
+                var tasksVisible = false; // Track the visibility state
+
+                viewTasksBtn.addEventListener('click', function () {
+                    if (tasksVisible) {
+                        pendingTasksDiv.innerHTML = ''; // Clear tasks
+                        tasksVisible = false;
+                    } else {
+                        pendingTasksDiv.innerHTML = ''; // Clear previous tasks
+                        if (tasks.length === 0) {
+                            var noTasksMessage = document.createElement('p');
+                            noTasksMessage.textContent = 'No pending tasks.';
+                            pendingTasksDiv.appendChild(noTasksMessage);
+                        } else {
+                            tasks.forEach(function (task) {
+                                var taskItem = createTaskItem(task);
+                                pendingTasksDiv.appendChild(taskItem);
+                            });
+                        }
+                        tasksVisible = true;
+                    }
+                });
+
+                function createTaskItem(task) {
+                    var taskItem = document.createElement('div');
+                    taskItem.className = 'content-item';
+
+                    var taskTitle = document.createElement('p');
+                    taskTitle.textContent = 'Task: ' + task.title;
+
+                    var taskPriority = document.createElement('p');
+                    taskPriority.textContent = 'Priority: ' + task.priority;
+
+                    var completeButton = document.createElement('button');
+                    completeButton.className = 'try-now-btn';
+                    completeButton.textContent = 'Complete';
+                    completeButton.addEventListener('click', function () {
+                        completeTask(task, taskItem);
+                    });
+
+                    taskItem.appendChild(taskTitle);
+                    taskItem.appendChild(taskPriority);
+                    taskItem.appendChild(completeButton);
+
+                    return taskItem;
+                }
+
+                function completeTask(task, taskItem) {
+                    var taskIndex = tasks.indexOf(task);
+                    if (taskIndex !== -1) {
+                        tasks.splice(taskIndex, 1); // Remove task from the list
+                        taskItem.remove(); // Remove task item from the DOM
+                    }
+                }
+            </script>
+            <!--end section  -->
+
+            <div class="section">
+                <div class="section-title-bar">
+                    <h2 class="section-title">Task Assignments</h2>
+                </div>
+                <div class="section-content">
+                    <h3 class="subtitle">Assign tasks to employees.</h3>
+                    <form id="task-assignment-form">
+                        <div class="form-group">
+                            <label for="employee-name">Employee Name:</label>
+                            <input type="text" id="employee-name" class="input" required />
+                        </div>
+                        <div class="form-group">
+                            <label for="task">Task:</label>
+                            <input type="text" id="task" class="input" required />
+                        </div>
+                        <input type="submit" value="Assign Task" class="submit-btn" />
+                    </form>
+                    <p id="submission-message"></p>
+                </div>
+            </div>
+
+            <style>
+                .form-group {
+                    margin-bottom: 20px;
+                }
+
+                .form-group label {
+                    display: block;
+                    font-weight: bold;
+                }
+
+                .input {
+                    width: 100%;
+                    padding: 8px;
+                    border: 1px solid #ccc;
+                    border-radius: 4px;
+                }
+
+                .submit-btn {
+                    padding: 10px 20px;
+                    font-size: 16px;
+                    background-color: #0b7079;
+                    color: white;
+                    border: none;
+                    border-radius: 4px;
+                    cursor: pointer;
+
+                }
+
+                .section-content {
+                    position: relative;
+                }
+
+                #submission-message {
+                    position: absolute;
+                    top: 100%;
+                    left: 0;
+                    margin-top: 10px;
+                }
+            </style>
+
+            <script>
+                var taskAssignmentForm = document.getElementById('task-assignment-form');
+                var submissionMessage = document.getElementById('submission-message');
+
+                taskAssignmentForm.addEventListener('submit', function (event) {
+                    event.preventDefault();
+                    var employeeNameInput = document.getElementById('employee-name');
+                    var taskInput = document.getElementById('task');
+
+                    var employeeName = employeeNameInput.value;
+                    var task = taskInput.value;
+
+                    // Perform the task assignment logic here (e.g., store the assignment, notify the employee, etc.)
+
+                    // Display the submission message
+                    submissionMessage.textContent = 'Task assigned successfully to ' + employeeName + '!';
+
+                    // Clear the input fields
+                    employeeNameInput.value = '';
+                    taskInput.value = '';
+                });
+            </script>
+
+
+        </div>
+        </div>
+    </main>
+
+
+    <footer class="footer">
+        <div class="footer-content">
+            <p>&copy; 2023 Cilvcki Bank. All rights reserved.</p>
+        </div>
+    </footer>
+    <script src="Admin.js"></script>
+</body>
+
+</html>

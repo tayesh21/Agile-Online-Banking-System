@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Customer Reports</title>
+    <link rel="stylesheet" href="reportstyle.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />
+</head>
+
+<body>
+  <div class="backGroundForTheLogo">
+    <div class="left-section">
+      <img src="public\playground_assets\logo.png" alt="logo" id="img1" class="logo">
+    </div>
+    <div class="right-section">
+
+      <img src="public\playground_assets\marker.png" class="fa fa-phone">
+      <a href="atmFinder.html" style="text-decoration: none;"><span class="findATM">Branch & ATM Finder</span></a>
+      <img src="public/playground_assets/phoneSymbol.png" class="fa fa-phone">
+      <a href="ContactUs.html" style="text-decoration: none;"><span class="contactUs">Contact Us</span></a>
+      <span class="material-symbols-outlined" style="color: white;font-size: 16px;">
+        notifications
+        </span>
+      <a class="text" href="#" style="text-decoration: none;"><span class="notify">Notifications and Reminders</span></a>
+      <button id="loginButton" class="button"><a href="homePageClient.html" style="text-decoration: none;color: inherit;">Logout</button>
+    </div>
+  </div>
+  <nav>
+    <ul>
+      <li><a href="homePageClient.html">Home</a></li>
+      <li><a href="Aboutus.html">About Us</a></li>
+      <li><a href="transactions.html">My Account</a></li>
+      <li><a href="reports.html">Report a Problem?</a></li>
+    </ul>
+  </nav>
+
+  <div id="popup" class="popup">
+    <div class="popup-content">
+      <span class="close">&times;</span>
+      <h2>Notifications and Reminders</h2>
+      <nav class="notification-nav">
+        <ul>
+          <li><a href="#" class="active" data-tab="unread">Unread</a></li>
+          <li><a href="#" data-tab="read">Read</a></li>
+          <li><a href="#" data-tab="reminder">Create a Reminder</a></li>
+        </ul>
+      </nav>
+      <div class="notification-section" id="unread-section">
+        <h3>Unread Notifications</h3>
+        <div class="notification-list">
+          <!-- Unread notifications will be dynamically populated here -->
+        </div>
+        <button id="mark-read-btn">Mark as Read</button>
+      </div>
+      <div class="notification-section" id="read-section" style="display: none;">
+        <h3>Read Notifications</h3>
+        <div class="notification-list">
+          <!-- Read notifications will be dynamically populated here -->
+        </div>
+      </div>
+      <div class="notification-section" id="reminder-section" style="display: none;">
+        <h3>Create a Reminder</h3>
+        <form id="create-reminder-form">
+          <div class="form-group">
+            <label for="reminder-title">Title:</label>
+            <input type="text" id="reminder-title" class="input" />
+          </div>
+          <div class="form-group">
+            <label for="reminder-date">Date:</label>
+            <input type="date" id="reminder-date" class="input" />
+          </div>
+          <input type="submit" value="Submit" class="submit-btn" />
+        </form>
+        <p id="success-message">Reminder created successfully!</p>
+      </div>
+    </div>
+  </div>
+    <main>
+
+        <form id="reportForm">
+            <div class="bar"></div>
+            <div class="bar-background"></div>
+            <h2 class="bar-title">Submit a Report</h2>
+            <div class="form-group">
+                <label for="reportType">Report Type:</label>
+                <select id="reportType" name="reportType">
+                    <option value="Bug Report">Bug Report</option>
+                    <option value="Account Report">Account Report</option>
+                    <option value="Credit Card report">Credit Card Report</option>
+                    <option value="General Complaint"> General Complaint</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="reportContent">Report Content:</label>
+                <textarea id="reportContent" name="reportContent" rows="4"></textarea>
+            </div>
+            <button type="submit">Submit</button>
+            <p id="verificationMessage" class="verification-message"></p>
+        </form>
+
+        <div id="reportContainer" class="report-container">
+            <div class="bar"></div>
+            <div class="bar-background"></div>
+            <h2 class="bar-title">Submitted Report</h2>
+            <div id="submittedReport" class="report"></div>
+
+            <div class="bar"></div>
+            <div class="bar-background"></div>
+            <h2 class="bar-title">Example Report</h2>
+            <div class="report">
+                <h3>Report Example</h3>
+                <p>When I click on the "Submit" button, nothing happens. The form doesn't get submitted, and I don't see
+                    any error messages..</p>
+            </div>
+        </div>
+    </main>
+
+    <footer class="footer">
+        <div class="footer-content">
+          <p>&copy; 2023 Cilvcki Bank. All rights reserved.</p>
+        </div>
+      </footer>
+    <script src="Reports.js"></script>
+</body>
+
+</html>

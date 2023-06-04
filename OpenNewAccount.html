@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <link rel="stylesheet" href="OpenAccount.css">
+    <title>Online Banking - Open New Account</title>
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />
+</head>
+
+<body>
+    <div class="backGroundForTheLogo">
+        <div class="left-section">
+            <img src="public\playground_assets\logo.png" alt="logo" id="img1" class="logo">
+        </div>
+        <div class="right-section">
+
+            <img src="public\playground_assets\marker.png" class="fa fa-phone">
+            <a href="atmFinder.html" style="text-decoration: none;"><span class="findATM">Branch & ATM Finder</span></a>
+            <img src="public/playground_assets/phoneSymbol.png" class="fa fa-phone">
+            <a href="ContactUs.html" style="text-decoration: none;"><span class="contactUs">Contact Us</span></a>
+            <span class="material-symbols-outlined" style="color: white;font-size: 16px;">
+                notifications
+            </span>
+            <a class="text" href="#" style="text-decoration: none;"><span class="notify">Notifications and
+                    Reminders</span></a>
+            <button id="loginButton" class="button"><a href="homePageClient.html" style="text-decoration: none;color: inherit;">Logout</button>
+        </div>
+    </div>
+    <nav>
+        <ul>
+            <li><a href="homePageClient.html">Home</a></li>
+            <li><a href="Aboutus.html">About Us</a></li>
+            <li><a href="transactions.html">My Account</a></li>
+            <li><a href="reports.html">Report a Problem?</a></li>
+        </ul>
+    </nav>
+
+    <div id="popup" class="popup">
+        <div class="popup-content">
+            <span class="close">&times;</span>
+            <h2>Notifications and Reminders</h2>
+            <nav class="notification-nav">
+                <ul>
+                    <li><a href="#" class="active" data-tab="unread">Unread</a></li>
+                    <li><a href="#" data-tab="read">Read</a></li>
+                    <li><a href="#" data-tab="reminder">Create a Reminder</a></li>
+                </ul>
+            </nav>
+            <div class="notification-section" id="unread-section">
+                <h3>Unread Notifications</h3>
+                <div class="notification-list">
+                    <!-- Unread notifications will be dynamically populated here -->
+                </div>
+                <button id="mark-read-btn">Mark as Read</button>
+            </div>
+            <div class="notification-section" id="read-section" style="display: none;">
+                <h3>Read Notifications</h3>
+                <div class="notification-list">
+                    <!-- Read notifications will be dynamically populated here -->
+                </div>
+            </div>
+            <div class="notification-section" id="reminder-section" style="display: none;">
+                <h3>Create a Reminder</h3>
+                <form id="create-reminder-form">
+                    <div class="form-group">
+                        <label for="reminder-title">Title:</label>
+                        <input type="text" id="reminder-title" class="input" />
+                    </div>
+                    <div class="form-group">
+                        <label for="reminder-date">Date:</label>
+                        <input type="date" id="reminder-date" class="input" />
+                    </div>
+                    <input type="submit" value="Submit" class="submit-btn" />
+                </form>
+                <p id="success-message">Reminder created successfully!</p>
+            </div>
+        </div>
+    </div>
+
+
+    <h1>Open New Bank Account</h1>
+    <form id="open_account_form">
+        <label for="account_type">Account Type:</label>
+        <select id="account_type" name="account_type">
+            <option value="savings">Savings Account</option>
+            <option value="current">Current Account</option>
+            <option value="fixed_deposit">Fixed Deposit</option>
+        </select><br><br>
+        <label for="initial_deposit">Initial Deposit:</label>
+        <input type="number" id="initial_deposit" name="initial_deposit" required><br><br>
+        <label for="customer_name">Customer Name:</label>
+        <input type="text" id="customer_name" name="customer_name" required><br><br>
+        <label for="customer_email">Customer Email:</label>
+        <input type="email" id="customer_email" name="customer_email" required><br><br>
+        <label for="customer_phone">Customer Phone:</label>
+        <input type="tel" id="customer_phone" name="customer_phone" required><br><br>
+        <input type="submit" value="Open Account" class="submit-btn" />
+    </form>
+    <p id="submission_message"></p>
+    
+
+    <script src="OpenAccount.js"></script>
+    <footer class="footer">
+        <div class="footer-content">
+            <p>&copy; 2023 Cilvcki Bank. All rights reserved.</p>
+        </div>
+    </footer>
+
+</body>
+
+</html>

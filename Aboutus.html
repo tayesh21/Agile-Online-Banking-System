@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>About us</title>
+  <link rel="stylesheet" href="Aboutus.css">
+  
+  <link rel="stylesheet"
+    href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />
+  <link rel="stylesheet"
+    href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />
+</head>
+
+<body>
+  <div class="backGroundForTheLogo">
+    <div class="left-section">
+      <img src="public\playground_assets\logo.png" alt="logo" id="img1" class="logo">
+    </div>
+    <div class="right-section">
+
+      <img src="public\playground_assets\marker.png" class="fa fa-phone">
+      <a href="atmFinder.html" style="text-decoration: none;"><span class="findATM">Branch & ATM Finder</span></a>
+      <img src="public/playground_assets/phoneSymbol.png" class="fa fa-phone">
+      <a href="ContactUs.html" style="text-decoration: none;"><span class="contactUs">Contact Us</span></a>
+      <span class="material-symbols-outlined" style="color: white;font-size: 16px;">
+        notifications
+        </span>
+      <a class="text" href="#" style="text-decoration: none;"><span class="notify"> Notifications and Reminders</span></a>
+      <button class="button" onclick=""><a href="UserLogin.html" style="text-decoration: none;color: inherit;">Login</a></button>
+    </div>
+  </div>
+  <nav>
+    <ul>
+      <li><a href="homePageClient.html">Home</a></li>
+      <li><a href="Aboutus.html">About Us</a></li>
+      <li><a href="transactions.html">My Account</a></li>
+      <li><a href="reports.html">Report a Problem?</a></li>
+    </ul>
+  </nav>
+
+  <div id="popup" class="popup">
+    <div class="popup-content">
+      <span class="close">&times;</span>
+      <h2>Notifications and Reminders</h2>
+      <nav class="notification-nav">
+        <ul>
+          <li><a href="#" class="active" data-tab="unread">Unread</a></li>
+          <li><a href="#" data-tab="read">Read</a></li>
+          <li><a href="#" data-tab="reminder">Create a Reminder</a></li>
+        </ul>
+      </nav>
+      <div class="notification-section" id="unread-section">
+        <h3>Unread Notifications</h3>
+        <div class="notification-list">
+          <!-- Unread notifications will be dynamically populated here -->
+        </div>
+        <button id="mark-read-btn">Mark as Read</button>
+      </div>
+      <div class="notification-section" id="read-section" style="display: none;">
+        <h3>Read Notifications</h3>
+        <div class="notification-list">
+          <!-- Read notifications will be dynamically populated here -->
+        </div>
+      </div>
+      <div class="notification-section" id="reminder-section" style="display: none;">
+        <h3>Create a Reminder</h3>
+        <form id="create-reminder-form">
+          <div class="form-group">
+            <label for="reminder-title">Title:</label>
+            <input type="text" id="reminder-title" class="input" />
+          </div>
+          <div class="form-group">
+            <label for="reminder-date">Date:</label>
+            <input type="date" id="reminder-date" class="input" />
+          </div>
+          <input type="submit" value="Submit" class="submit-btn" />
+        </form>
+        <p id="success-message">Reminder created successfully!</p>
+      </div>
+    </div>
+  </div>
+
+
+  <div class="backGroundForTheLogo" style="height:200px;justify-content: center;">
+    <div class="container">
+      <h1 style="margin-left: 5%;font-size: 50px;">Cilveki Bank</h1>
+      <p style="margin-left: 8%;margin-right: 2%;font-size: 16px;margin-top: -1%; text-indent: 5%;">
+        was established on the 21st of March, 1976, as the first joint Arab Bank working in Egypt to abide by the
+        provisions of the investment law 43 of the year 1974, which was amended in accordance with the investment laws
+        230/1989 and 8/1997.
+
+        cilveki's issued and paid-up capital has increased from US$ 4 million dollars in 1978 to currently reach US$ 150
+        million dollars distributed over 15 million shares, par nominal value of US$ 10 dollars per share, while the
+        authorized capital amounts to US$ 200 million dollars.
+
+        The bank executes all banking investment, financial, and commercial matters related to banking investment
+        business and contributes to financing economic, industrial, real estate, agricultural, and commercial projects,
+        as well as Egyptian foreign trade.
+
+        In addition to provision of loans, the bank offers short, medium and long-term clients credit facilities, as
+        well as retail banking products.
+
+        Also, it accepts deposits and issues saving certificates in Egyptian and foreign currencies and carries out
+        relevant securities.
+
+        Moreover, in addition to all conventional banking services cilveki provides products & services that are in
+        compliance with the provisions of the Islamic law through its Islamic branch.
+      </p>
+      <div class="miniContainer">
+        <form>
+          <h1 style="padding-left:20px">How to open an account?</h1>
+          <p style="padding-left:60px;padding-top: 20px;">Opening an account is easy. You can apply online, by phone or
+            in person.
+          </p>
+        </form>
+        <form>
+          <h1 style="padding-left:20px">How to apply for a credit card?</h1>
+          <p style="padding-left: 60px;padding-top: 20px;">Applying for a credit card is easy. You can apply online, by
+            phone or in person.</p>
+        </form>
+        <form style="margin-top: 50px;">
+          <h1 style="padding-left:20px">How to apply for a loan?</h2>
+            <p style="padding-left: 60px;padding-top: 20px;"> Applying for a loan is easy. You can apply online, by
+              phone or in person.</p>
+        </form>
+        <form style="margin-top: 50px;">
+          <h1 style="padding-left:20px">How to apply for a mortgage?</h1>
+          <p style="padding-left: 60px;padding-top: 20px;"> Applying for a mortgage is easy. You can apply online, by
+            phone or in person.</p>
+        </form>
+      </div>
+      <!-- margin-left:60px -->
+      <div class="FAQs">
+        <h1 style="padding-left:20px"><span class="material-symbols-outlined"
+            style="padding-right: 20px;">help</span>FAQs</h1>
+        <p style="padding-left: 60px;padding-top: 20px;font-size: 16px;">If you have any questions, we have the answers.
+        </p>
+        <ol>
+          <li style="font-weight: bold;">My internet banking Account </li>
+          <ul>
+            <li>Can I change my user name or password before there expiry?
+              You can change your password only before expiry after login by using (User
+              name & Password) <span class="material-symbols-outlined"
+                style="vertical-align: middle;color: rgb(65, 161, 193);">
+                arrow_forward
+              </span> (Security) <span class="material-symbols-outlined"
+                style="vertical-align: middle;color: rgb(65, 161, 193);">
+                arrow_forward
+              </span>(Change password)</li>
+            <li style="list-style-type: none;color: rgb(48, 171, 48);">How can I change my personal contacts details?
+              From branch </li>
+            <li>
+              If I forgot my password or it is blocked, what should I do?
+            </li>
+            <li style="list-style-type: none;color: rgb(48, 171, 48);">
+              If your account is blocked or you need to reset your password you can call 19111
+              If you forgot your password you can clicking on (forgot my password) and follow
+              the steps to set new password
+            </li>
+            <li>
+              How can I find the account transactions movement?
+            </li>
+            <li style="list-style-type: none;color: rgb(48, 171, 48);">
+              login by using (User name & Password) <span class="material-symbols-outlined"
+                style="vertical-align: middle;color: rgb(65, 161, 193);">
+                arrow_forward
+              </span>(account) (My account) <span class="material-symbols-outlined"
+                style="vertical-align: middle;color: rgb(65, 161, 193);">
+                arrow_forward
+              </span>
+              select your account then clicking statement details
+            </li>
+          </ul>
+
+
+          <li style="font-weight: bold;">Transactions</li>
+          <ul>
+            <li style="list-style-type: square;font-weight: bold;">Cards</li>
+            <li>
+              Can I reactivate deactivated card from internet banking?
+            </li>
+            <li style="list-style-type: none;color: rgb(48, 171, 48);">No</li>
+            <li>
+              How can I settle my credit cards due amounts?
+            </li>
+            <li style="list-style-type: none;color: rgb(48, 171, 48);">
+              Login by using (User name & Password) <span class="material-symbols-outlined"
+                style="vertical-align: middle;color: rgb(65, 161, 193);"> arrow_forward
+              </span>(Cards)<span class="material-symbols-outlined"
+                style="vertical-align: middle;color: rgb(65, 161, 193);">arrow_forward
+              </span> (payment to my card)
+              then select debit account then add your due amount
+            </li>
+
+
+            <li style="list-style:square;font-weight: bold;">
+              Cheques
+            </li>
+            <li>
+              What can I view from Cheque history screen?
+            </li>
+            <li style="list-style-type: none;color: rgb(48, 171, 48);">
+              Cheque number
+            </li>
+            <li style="list-style-type: none;color: rgb(48, 171, 48);">
+              Cheque status
+            </li>
+            <li style="list-style-type: none;color: rgb(48, 171, 48);">
+              Cheque amount
+            </li>
+            <li style="list-style-type: none;color: rgb(48, 171, 48);">
+              Cheque collection date
+            </li>
+            <li>
+              If the Cheque Book is requested through the internet banking, will I be charged by the bank?
+            </li>
+            <li style="list-style-type: none;color: rgb(48, 171, 48);">
+              Cheque book requested fees will deducted from customer account
+            </li>
+            <li>
+              How the Cheque book is delivered?
+            </li>
+            <li style="list-style-type: none;color: rgb(48, 171, 48);">
+              Cheque book requested fees will deducted from customer account
+            </li>
+            <li>
+              How the Cheque book is delivered?
+            </li>
+            <li style="list-style-type: none;color: rgb(48, 171, 48);">
+              Customer can choose nearest branch to receive it
+            </li>
+
+
+            <li style="list-style:square;font-weight: bold;">
+              Transfers
+            </li>
+            <li>
+              What Types of transfers can I do?
+            </li>
+            <li style="list-style-type: none;color: rgb(48, 171, 48);">
+              Transfer between my accounts
+            </li>
+            <li style="list-style-type: none;color: rgb(48, 171, 48);">
+              Transfer between my accounts
+            </li>
+            <li style="list-style-type: none;color: rgb(48, 171, 48);">
+              Transfer to cilveki accounts
+            </li>
+            <li style="list-style-type: none;color: rgb(48, 171, 48);">
+              Domestic transfer (within Egypt)
+            </li>
+            <li style="list-style-type: none;color: rgb(48, 171, 48);">
+              International transfer
+            </li>
+            <li>
+              What are transfer limits between accounts?
+            </li>
+            <li style="list-style-type: none;color: rgb(48, 171, 48);">
+              Transfer between same customer accounts unlimited
+            </li>
+            <li style="list-style-type: none;color: rgb(48, 171, 48);">
+              Transfer to cilveki accounts 500000 LE
+            </li>
+            <li style="list-style-type: none;color: rgb(48, 171, 48);">
+              Domestic transfer (within Egypt) & International transfer 500000
+            </li>
+          </ul>
+        </ol>
+      </div>
+    </div>
+  </div>
+  <div
+    style="display: flex;bottom: 0;justify-content: center;background-color: #0b7079;width: 1260px;margin-left: -5px;margin-top: 1453px;">
+    <p style="text-align: right;font-size: 15px;color: white;">&copy; 2023 Celviki Inc. All rights reserved.</p>
+  </div>
+  <script src="Aboutus.js"></script>
+</body>
+
+</html>

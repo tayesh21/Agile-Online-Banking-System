@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="applycreditcard.css">
+  <title>Credit Card Application</title>
+</head>
+
+<body>
+  <div class="backGroundForTheLogo">
+    <div class="left-section">
+      <img src="public\playground_assets\logo.png" alt="logo" id="img1" class="logo">
+    </div>
+    <div class="right-section">
+
+      <img src="public\playground_assets\marker.png" class="fa fa-phone">
+      <a href="atmFinder.html" style="text-decoration: none;"><span class="findATM">Branch & ATM Finder</span></a>
+      <img src="public/playground_assets/phoneSymbol.png" class="fa fa-phone">
+      <a href="ContactUs.html" style="text-decoration: none;"><span class="contactUs">Contact Us</span></a>
+      <span class="material-symbols-outlined" style="color: white;font-size: 16px;">
+        notifications
+      </span>
+      <a class="text" href="#" style="text-decoration: none;"><span class="notify">Notifications and
+          Reminders</span></a>
+      <button id="loginButton" class="button"><a href="homePageClient.html" style="text-decoration: none;color: inherit;">Logout</button>
+    </div>
+  </div>
+  <nav>
+    <ul>
+      <li><a href="homePageClient.html" style="text-decoration: none;">Home</a></li>
+      <li><a href="Aboutus.html" style="text-decoration: none;">About Us</a></li>
+      <li><a href="transactions.html" style="text-decoration: none;">My Account</a></li>
+      <li><a href="reports.html" style="text-decoration: none;">Report a Problem?</a></li>
+    </ul>
+  </nav>
+
+  <div id="popup" class="popup">
+    <div class="popup-content">
+      <span class="close">&times;</span>
+      <h2>Notifications and Reminders</h2>
+      <nav class="notification-nav">
+        <ul>
+          <li><a href="#" class="active" data-tab="unread">Unread</a></li>
+          <li><a href="#" data-tab="read">Read</a></li>
+          <li><a href="#" data-tab="reminder">Create a Reminder</a></li>
+        </ul>
+      </nav>
+      <div class="notification-section" id="unread-section">
+        <h3>Unread Notifications</h3>
+        <div class="notification-list">
+          <!-- Unread notifications will be dynamically populated here -->
+        </div>
+        <button id="mark-read-btn">Mark as Read</button>
+      </div>
+      <div class="notification-section" id="read-section" style="display: none;">
+        <h3>Read Notifications</h3>
+        <div class="notification-list">
+          <!-- Read notifications will be dynamically populated here -->
+        </div>
+      </div>
+      <div class="notification-section" id="reminder-section" style="display: none;">
+        <h3>Create a Reminder</h3>
+        <form id="create-reminder-form">
+          <div class="form-group">
+            <label for="reminder-title">Title:</label>
+            <input type="text" id="reminder-title" class="input" />
+          </div>
+          <div class="form-group">
+            <label for="reminder-date">Date:</label>
+            <input type="date" id="reminder-date" class="input" />
+          </div>
+          <input type="submit" value="Submit" class="submit-btn" />
+        </form>
+        <p id="success-message">Reminder created successfully!</p>
+      </div>
+    </div>
+  </div>
+
+
+  
+  <div class="container">
+    <h1>Credit Card Application</h1>
+    <div class="card-types">
+      <div class="card-type">
+        <img src="public/playground_assets/Classic.JPG.png" alt="Classic Card">
+        <h2>Classic Card</h2>
+        <ul>
+          <li>Cash Withdrawals up to EGP 7,000 per day</li>
+          <li>Credit limit up to 4,999</li>
+          <li>Reward points: 0.5 Point for each 1 EGP purchase</li>
+          <li>Longest Grace period</li>
+          <li>Card settlement through ATM network</li>
+          <li>Discounts at a variety of selected stores</li>
+          <li>Carry out transactions at all government entities (ex. taxes, insurance, utilities...) that operate Meeza
+            POS systems</li>
+          <li>Contactless feature</li>
+        </ul>
+      </div>
+      <div class="card-type">
+        <img src="public/playground_assets/Platinum.jpg" alt="Titanium Card">
+        <h2>Titanium Card</h2>
+        <ul>
+          <li>Cash Withdrawals up to EGP 20,000 per day</li>
+          <li>Credit limit up to 49,999</li>
+          <li>Reward points: 0.6 Point for each 1 EGP purchase</li>
+          <li>Longest Grace period</li>
+          <li>Access to VIP Lounges</li>
+          <li>Card settlement through ATM network</li>
+          <li>Discounts at a variety of selected stores</li>
+          <li>Carry out transactions at all government entities (ex. taxes, insurance, utilities...) that operate Meeza
+            POS systems.</li>
+          <li>Contactless feature.</li>
+        </ul>
+      </div>
+      <div class="card-type">
+        <img src="public/playground_assets/Titanium.jpg" alt="Platinum Card">
+        <h2>Platinum card</h2>
+        <ul>
+          <li>Cash Withdrawals up to EGP 60,000 per day.</li>
+          <li>Credit limit up to 750,000.</li>
+          <li>Reward points: 0.9 Point for each 1 EGP purchase.</li>
+          <li>Longest Grace period.</li>
+          <li>Access to VIP Lounges.</li>
+          <li>Card settlement through ATM network.</li>
+          <li>Discounts at a variety of selected stores.</li>
+          <li>Carry out transactions at all government entities (ex. taxes, insurance, utilities...) that operate Meeza
+            POS systems.</li>
+          <li>Contactless feature.</li>
+        </ul>
+      </div>
+    </div>
+    <form id="application-form">
+      <h2>Apply for a Credit Card</h2>
+      <div class="form-group">
+        <label for="first-name">First Name</label>
+        <br>
+        <input type="text" id="first-name" required>
+      </div>
+      <div class="form-group">
+        <label for="middle-name">Middle Name</label>
+        <br>
+        <input type="text" id="middle-name" required>
+      </div>
+      <div class="form-group">
+        <label for="last-name">Last Name</label>
+        <br>
+        <input type="text" id="last-name" required>
+      </div>
+      <div class="form-group">
+        <label for="phone-number">Phone Number</label>
+        <br>
+        <input type="tel" id="phone-number" required>
+      </div>
+      <div class="form-group">
+        <label for="bank-account">Bank Account</label>
+        <br>
+        <input type="text" id="bank-account" required>
+      </div>
+      <button type="submit">Submit</button>
+    </form>
+  </div>
+
+  <script>
+    var form = document.getElementById('application-form');
+    form.addEventListener('submit', function (event) {
+      event.preventDefault();
+
+      var firstName = document.getElementById('first-name').value;
+      var middleName = document.getElementById('middle-name').value;
+      var lastName = document.getElementById('last-name').value;
+      var phoneNumber = document.getElementById('phone-number').value;
+      var bankAccount = document.getElementById('bank-account').value;
+
+      // Perform validation or further processing of the form data here
+
+      // Display a success message
+      alert('Thank you for applying for a credit card, ' + firstName + ' ' + middleName + ' ' + lastName + '. We will contact you shortly at ' + phoneNumber + ' regarding your application.');
+    });
+  </script>
+  <script src="credit.js"></script>
+</body>
+
+</html>

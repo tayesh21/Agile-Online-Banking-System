@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="UserLogin.css" />
+    <title>Login</title>
+  </head>
+  <body>
+    <div class="container">
+      <h1>Please Log in</h1>
+      <form action="">
+        <div class="form-control">
+          <input type="text" name="" id="email123" required />
+          <label>Email
+
+            <!-- <label>
+            <span style="transition-delay: 0ms">E</span>
+              <span style="transition-delay: 50ms">m</span>
+              <span style="transition-delay: 100ms">a</span>
+              <span style="transition-delay: 150ms">i</span>
+              <span style="transition-delay: 200ms">l</span>
+        </label> -->
+          </label>
+        </div>
+
+        <div class="form-control">
+          <input type="password" name="" id="pass123" required />
+          <label>Password</label>
+        </div>
+
+        <button type="button" class="btn" onclick="loginInUserPage()">Login</button>
+
+        <p class="text">Don't have an account ? <a class="register" href="#">register</a></p>
+        <p class="text">Forgot your Password ? <a class="forgot-password" href="#">forget password</a></p>
+      </form>
+
+    </div>
+    <div id="popup" class="popup">
+      <div class="popup-content">
+        <span class="close">&times;</span>
+        <h2>Reset Password</h2>
+        <p>Please enter your email address and authentication code to reset your password.</p>
+        <form class="form">
+          <label for="email" class="label">Email:</label>
+          <input type="email" id="email" name="email" class="input"><br><br>
+          <label for="code" class="label">Authentication Code:</label>
+          <input type="text" id="code" name="code" class="input"><br><br>
+          <label for="password" class="label">New Password:</label>
+          <input type="password" id="password" name="password" class="input"><br><br>
+          <label for="confirm-password" class="label">Confirm Password:</label>
+          <input type="password" id="confirm-password" name="confirm-password" class="input"><br><br>
+          <input type="submit" value="Confirm" class="input">
+        </form>
+      </div>
+    </div>
+
+
+    <div id="popup1" class="popup">
+      <div class="popup-content">
+        <span class="close1">&times;</span>
+        <h2>Register</h2>
+        <p>Fill out the form to get started</p>
+        <form class="form" id="register-form" class="form">
+          <label for="email" class="label">Email:</label>
+          <input type="email" id="email" name="email" class="input"><br><br>
+          <label for="password" class="label">New Password:</label>
+          <input type="password" id="password" name="password" class="input"><br><br>
+          <label for="confirm-password" class="label">Confirm Password:</label>
+          <input type="password" id="confirm-password" name="confirm-password" class="input"><br><br>
+          <input type="submit" value="Register" class="input">
+        </form>
+      </div>
+    </div>
+    
+    <script src="UserLoginScript.js"></script>
+    <script src="glob.js"></script>
+  </body>
+</html>

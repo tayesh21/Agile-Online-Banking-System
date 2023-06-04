@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Home Page</title>
+    <!-- CSS -->
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />
+    <link rel="stylesheet" href="homePageClient.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Helvetica+Neue">
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />
+    <!-- JS -->
+    <script>
+        var prevScrollPos = window.pageYOffset;
+
+        window.onscroll = function () {
+            var currentScrollPos = window.pageYOffset;
+
+            if (prevScrollPos > currentScrollPos) {
+                document.querySelector("nav").classList.add("show");
+            } else {
+                document.querySelector("nav").classList.remove("show");
+            }
+
+            prevScrollPos = currentScrollPos;
+        };
+    </script>
+</head>
+
+<body>
+
+    <div class="backGroundForTheLogo">
+        <div class="left-section">
+          <img src="public\playground_assets\logo.png" alt="logo" id="img1" class="logo">
+        </div>
+        <div class="right-section">
+    
+          <img src="public\playground_assets\marker.png" class="fa fa-phone">
+          <a href="atmFinder.html" style="text-decoration: none;"><span class="findATM">Branch & ATM Finder</span></a>
+          <img src="public/playground_assets/phoneSymbol.png" class="fa fa-phone">
+          <a href="ContactUs.html" style="text-decoration: none;"><span class="contactUs">Contact Us</span></a>
+          <span class="material-symbols-outlined" style="color: white;font-size: 16px;">
+            notifications
+            </span>
+          <a class="text" href="#" style="text-decoration: none;"><span class="notify"><span class="notify">Notifications and Reminders</span></a>
+          <button class="button" onclick=""><a href="UserLogin.html" style="text-decoration: none;color: inherit;">Login</a></button>
+        </div>
+      </div>
+      <nav>
+        <ul>
+          <li><a href="homePageClient.html">Home</a></li>
+          <li><a href="Aboutus.html">About Us</a></li>
+          <li><a href="transactions.html" onclick="checkIfLoggedIn(event)">My Account</a></li>
+          <li><a href="reports.html">Report a Problem?</a></li>
+        </ul>
+      </nav>
+    
+      <div id="popup" class="popup">
+        <div class="popup-content">
+          <span class="close">&times;</span>
+          <h2>Notifications and Reminders</h2>
+          <nav class="notification-nav">
+            <ul>
+              <li><a href="#" class="active" data-tab="unread">Unread</a></li>
+              <li><a href="#" data-tab="read">Read</a></li>
+              <li><a href="#" data-tab="reminder">Create a Reminder</a></li>
+            </ul>
+          </nav>
+          <div class="notification-section" id="unread-section">
+            <h3>Unread Notifications</h3>
+            <div class="notification-list">
+              <!-- Unread notifications will be dynamically populated here -->
+            </div>
+            <button id="mark-read-btn">Mark as Read</button>
+          </div>
+          <div class="notification-section" id="read-section" style="display: none;">
+            <h3>Read Notifications</h3>
+            <div class="notification-list">
+              <!-- Read notifications will be dynamically populated here -->
+            </div>
+          </div>
+          <div class="notification-section" id="reminder-section" style="display: none;">
+            <h3>Create a Reminder</h3>
+            <form id="create-reminder-form">
+              <div class="form-group">
+                <label for="reminder-title">Title:</label>
+                <input type="text" id="reminder-title" class="input" />
+              </div>
+              <div class="form-group">
+                <label for="reminder-date">Date:</label>
+                <input type="date" id="reminder-date" class="input" />
+              </div>
+              <input type="submit" value="Submit" class="submit-btn" />
+            </form>
+            <p id="success-message">Reminder created successfully!</p>
+          </div>
+        </div>
+      </div>
+
+
+    <div class="changingWallpaper">
+        <div class="container">
+            <p
+                style="font-size: 12 px;font-family: 'Helvetica Neue', Arial, sans-serif;;margin:0px 0px 20px;color: white;">
+                Welcome back,</p>
+            <h1 style="color: white;font-family: 'Helvetica Neue', Arial, sans-serif;;font-size: 40px;">Not sure what
+                you're looking for?</h1>
+            <h2 style="color: white;font-family: 'Helvetica Neue', Arial, sans-serif;font-size: 26px;">Find answers to
+                all your questions in the FAQ</h2>
+            <button class="button1" onclick=""><a href="Aboutus.html" style="text-decoration: none;color: inherit;">Learn more</button>
+        </div>
+    </div>
+
+    <nav class="goToBar">
+        <a class="myBar" href="#Apply">APPLY ONLINE</a>
+        <a class="myBar" href="#News">NEWS</a>
+        <a class="myBar" href="#BlogArticle">BLOG ARTICLES</a>
+        <a class="myBar" href="#Awards">AWARDS</a>
+    </nav>
+
+
+
+
+    <section id="Apply">
+        <div class="CardLoanBlock">
+            <center style="padding-top: 40px;">
+                <p style="color: black;">APPLY ONLINE</p>
+                <h1 style="font-size: 40px;color: rgb(72, 128, 72);">Apply online now for cards and loans with ease!
+                </h1>
+            </center>
+            <center>
+                <span>
+                    <button class="buttonCardLoan" style="margin-right: 30px;">
+                        <span class="material-symbols-outlined">
+                            description
+                        </span>
+                        <a href="Credit.html" style="text-decoration: none;color: inherit;">Apply for a card</a>
+                    </button>
+                    <button class="buttonCardLoan">
+                        <span class="material-symbols-outlined">
+                            description
+                        </span>
+                        <a href="Loans.html" style="text-decoration: none;color: inherit;">Apply for a loan</a></button>
+                </span>
+            </center>
+        </div>
+    </section>
+
+    <section id="News">
+        <div class="NewsBlock">
+            <center style="padding-top: 40px;">
+                <p style="color: black;">NEWS</p>
+                <h1 style="font-size: 40px;color: rgb(72, 128, 72);padding-bottom: 30px;">Stay up to date with the
+                    latest news</h1>
+            </center>
+            <hr style="border-top: 1px solid black;width:75%;">
+            <div class="NewsContainer">
+                <p>06/02/2023</p>
+                <p style="font-size: 22px;font-weight: bold;">Cilveki Included in 2023 Bloomberg Gender-Equality Index
+                    (GEI) for Fifth Consecutive Year</p>
+                <p>Cilveki has secured its place in the index with its commitment to applying the principles of
+                    diversity, equality and inclusion within the workplace.</p>
+            </div>
+            <hr style="border-top: 1px solid black;width:75%;">
+            <div class="NewsContainer">
+                <p>29/01/2023</p>
+                <p style="font-size: 22px;font-weight: bold;">Cilveki fully acquires Mayfair Cilveki</p>
+                <p>Cilveki is pleased to announce that the Central Bank of Egypt (CBE) and the Central Bank of Kenya
+                    (CBK) have granted the Bank their consent to acquire the remaining 49% of Mayfair Cilveki to become
+                    a fully owned subsidiary of the Bank, for a total transaction...</p>
+            </div>
+            <hr style="border-top: 1px solid black;width:75%;">
+            <div class="NewsContainer">
+                <p>11/01/2023</p>
+                <p style="font-size: 22px;font-weight: bold;">Important Announcement</p>
+                <p>To continue providing our banking services, please note that it is prohibited to use all types of
+                    cards (credit, debit and prepaid) to perform purchases or cash withdrawals abroad if the cardholder
+                    is not present. It is also prohibited to use the cards...</p>
+            </div>
+            <hr style="border-top: 1px solid black;;width:75%;">
+            <center class="NewsContainer" style="font-size: 20px;padding-bottom: 40px;">No more news...</center>
+        </div>
+    </section>
+
+    <section id="BlogArticle">
+        <center style="padding-top: 40px;">
+            <h1 style="font-size: 40px;color: rgb(72, 128, 72);">Learning Center</h1>
+            <p style="font-size: 26px;padding-bottom: 2%;">Learn more about banking and your finances</p>
+        </center>
+        <div class="imagesDiv">
+            <div class="imagesForBlogs">
+                <img src="public\playground_assets\money.jpg" alt="Image" style="width: 100%;">
+                <div class="overlay">
+                    <p class="text" style="font-size: 25px;padding-top: 40px;padding-left: 20px;">How to build your net
+                        worth</p>
+                    <p class="text" style="font-size: 15px;padding-top: 15px;padding-left: 20px;">Your net worth is the
+                        difference between the value of your assets,</p>
+                </div>
+            </div>
+            <div class="imagesForBlogs">
+                <img src="public\playground_assets\guyWritingHisBills.jpg" style="width: 100%;">
+                <div class="overlay">
+                    <p class="text" style="font-size: 30px;padding-top: 40px;padding-left: 20px;">How to manage your
+                        bills</p>
+                    <p class="text" style="font-size: 15px;padding-top: -20px;padding-left: 20px;">Have you ever
+                        struggled to determine how much you should save,</p>
+                </div>
+            </div>
+            <div class="imagesForBlogs">
+                <img src="public\playground_assets\calculatingTaxes.jpg" style="width: 100%;">
+                <div class="overlay1">
+                    <p class="text" style="font-size: 30px;padding-top: 40px;padding-left: 20px;">How to manage Your
+                        finances</p>
+                    <p class="text" style="font-size: 15px;padding-top: 15px;padding-left: 20px;">Tackling your bills
+                        can be overwhelming, especially if you are already behind on payments</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="Awards">
+        <center style="padding-top: 40px;">AWARDS</center>
+        <center>
+            <h1 style="font-size:40px;color: rgb(72, 128, 72);">Cilveki's integrity and quality are recognized
+                internationally</h1>
+        </center>
+        <div class="awardsContainer">
+            <div class="award">
+                <span class="material-symbols-outlined" style="padding-left:30%">payments</span>
+                <p style="font-size:20px;font-weight: bolder;">Best Treasury and Cash Management Providers</p>
+            </div>
+            <div class="award">
+                <span class="material-symbols-outlined" style="padding-left:23%">star</span>
+                <p style="font-size:20px;font-weight: bolder;">Best bank in Egypt</p>
+            </div>
+            <div class="award">
+                <span class="material-symbols-outlined" style="padding-left:45%">currency_exchange</span>
+                <p style="font-size:20px;font-weight: bolder;text-align: center;">Best Foreign Exchange Provider in
+                    Egypt</p>
+            </div>
+        </div>
+    </section>
+    <footer class="footer">
+        <div class="footer-content">
+          <p>&copy; 2023 Cilvcki Bank. All rights reserved.</p>
+        </div>
+      </footer>
+    
+    <script src="homePageClient.js"></script>
+    <script src="glob.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <link rel="stylesheet" href="transfermoney.css">
+  <title>Online Banking - Money Transfer</title>
+  <script>
+    function checkBalance(event) {
+      event.preventDefault();
+      var balance = parseFloat(document.getElementById("balance").textContent);
+      var amount = parseFloat(document.getElementById("amount").value);
+      if (amount > balance) {
+        alert("Insufficient funds! Your current balance is " + balance + ".");
+        return;
+      }
+      balance -= amount;
+      document.getElementById("balance").textContent = balance.toFixed(2);
+
+      // show success message
+      var successMessage = document.getElementById("success-message");
+      successMessage.style.display = "block";
+      setTimeout(function () {
+        successMessage.style.display = "none";
+      }, 3000);
+    }
+  </script>
+</head>
+
+<body>
+  <div class="backGroundForTheLogo">
+    <div class="left-section">
+      <img src="public\playground_assets\logo.png" alt="logo" id="img1" class="logo">
+    </div>
+    <div class="right-section">
+
+      <img src="public\playground_assets\marker.png" class="fa fa-phone">
+      <a href="atmFinder.html" style="text-decoration: none;"><span class="findATM">Branch & ATM Finder</span></a>
+      <img src="public/playground_assets/phoneSymbol.png" class="fa fa-phone">
+      <a href="ContactUs.html" style="text-decoration: none;"><span class="contactUs">Contact Us</span></a>
+      <a class="text" href="#" style="text-decoration: none;"> Notifications and Reminders</a>
+      <button class="button" onclick="">Login</button>
+    </div>
+  </div>
+  <nav>
+    <ul>
+      <li><a href="homePageClient.html">Home</a></li>
+      <li><a href="Aboutus.html">About Us</a></li>
+      <li><a href="transactions.html">My Account</a></li>
+      <li><a href="reports.html">Report a Problem?</a></li>
+    </ul>
+  </nav>
+
+  <div id="popup" class="popup">
+    <div class="popup-content">
+      <span class="close">&times;</span>
+      <h2>Notifications</h2>
+      <nav class="notification-nav">
+        <ul>
+          <li><a href="#" class="active" data-tab="unread">Unread</a></li>
+          <li><a href="#" data-tab="read">Read</a></li>
+          <li><a href="#" data-tab="reminder">Create a Reminder</a></li>
+        </ul>
+      </nav>
+      <div class="notification-section" id="unread-section">
+        <h3>Unread Notifications</h3>
+        <div class="notification-list">
+          <!-- Unread notifications will be dynamically populated here -->
+        </div>
+        <button id="mark-read-btn">Mark as Read</button>
+      </div>
+      <div class="notification-section" id="read-section" style="display: none;">
+        <h3>Read Notifications</h3>
+        <div class="notification-list">
+          <!-- Read notifications will be dynamically populated here -->
+        </div>
+      </div>
+      <div class="notification-section" id="reminder-section" style="display: none;">
+        <h3>Create a Reminder</h3>
+        <form id="create-reminder-form">
+          <div class="form-group">
+            <label for="reminder-title">Title:</label>
+            <input type="text" id="reminder-title" class="input" />
+          </div>
+          <div class="form-group">
+            <label for="reminder-date">Date:</label>
+            <input type="date" id="reminder-date" class="input" />
+          </div>
+          <input type="submit" value="Submit" class="submit-btn" />
+        </form>
+        <p id="success-message">Reminder created successfully!</p>
+      </div>
+    </div>
+  </div>
+
+
+  <h1>Transfer Money</h1>
+  <p>Current Balance: $<span id="balance">1000.00</span></p>
+  <form id="transfer_form">
+    <label for="from_account">From Account:</label>
+    <select id="from_account" name="from_account">
+      <option value="account1">Account 1</option>
+      <option value="account2">Account 2</option>
+    </select><br><br>
+    <label for="to_account">To Account:</label>
+    <input type="text" id="to_account" name="to_account" required><br><br>
+    <label for="amount">Amount:</label>
+    <input type="number" id="amount" name="amount" required><br><br>
+    <label for="transfer_type">Transfer Type:</label>
+    <select id="transfer_type" name="transfer_type">
+      <option value="internal">Internal</option>
+      <option value="domestic">Domestic</option>
+      <option value="international">International</option>
+    </select><br><br>
+    <div id="bank_details" style="display: none;">
+      <label for="bank_name">Bank Name:</label>
+      <input type="text" id="bank_name" name="bank_name"><br><br>
+      <label for="bank_branch">Bank Branch:</label>
+      <input type="text" id="bank_branch" name="bank_branch"><br><br>
+    </div>
+    <input type="button" class="transfer_button"value="Transfer" id="transfer_button">
+  </form>
+  <p id="submission_message"></p>
+
+  <script src="transfermoney.js"></script>
+    <footer class="footer">
+      <div class="footer-content">
+        <p>&copy; 2023 Cilvcki Bank. All rights reserved.</p>
+      </div>
+    </footer>
+
+</body>
+
+</html>

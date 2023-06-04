@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <link rel="stylesheet" type="text/css" href="transactions.css">
+</head>
+
+<body>
+    <div class="backGroundForTheLogo">
+        <div class="left-section">
+            <img src="public\playground_assets\logo.png" alt="logo" id="img1" class="logo">
+        </div>
+        <div class="right-section">
+            <a class="text" href="#" style="text-decoration: none;"><span class="notify">Notifications and
+                    Reminders</span></a>
+                    <button id="loginButton" class="button"><a href="homePageClient.html" style="text-decoration: none;color: inherit;">Logout</button>
+        </div>
+    </div>
+    <nav>
+        <ul>
+            <li><a href="BankerAccount.html">Summary</a></li>
+            <li><a href="ReportHandling.html">Handle Reports</a></li>
+        </ul>
+    </nav>
+
+    <div id="popup" class="popup">
+        <div class="popup-content">
+            <span class="close">&times;</span>
+            <h2>Notifications</h2>
+            <nav class="notification-nav">
+                <ul>
+                    <li><a href="#" class="active" data-tab="unread">Unread</a></li>
+                    <li><a href="#" data-tab="read">Read</a></li>
+                    <li><a href="#" data-tab="reminder">Create a Reminder</a></li>
+                </ul>
+            </nav>
+            <div class="notification-section" id="unread-section">
+                <h3>Unread Notifications</h3>
+                <div class="notification-list">
+                    <!-- Unread notifications will be dynamically populated here -->
+                </div>
+                <button id="mark-read-btn">Mark as Read</button>
+            </div>
+            <div class="notification-section" id="read-section" style="display: none;">
+                <h3>Read Notifications</h3>
+                <div class="notification-list">
+                    <!-- Read notifications will be dynamically populated here -->
+                </div>
+            </div>
+            <div class="notification-section" id="reminder-section" style="display: none;">
+                <h3>Create a Reminder</h3>
+                <form id="create-reminder-form">
+                    <div class="form-group">
+                        <label for="reminder-title">Title:</label>
+                        <input type="text" id="reminder-title" class="input" />
+                    </div>
+                    <div class="form-group">
+                        <label for="reminder-date">Date:</label>
+                        <input type="date" id="reminder-date" class="input" />
+                    </div>
+                    <input type="submit" value="Submit" class="submit-btn" />
+                </form>
+                <p id="success-message">Reminder created successfully!</p>
+            </div>
+        </div>
+    </div>
+
+
+
+
+    <main>
+        <h2 class="page-title">Banker Summary</h2>
+        <div class="container">
+
+            <div class="section">
+                <div class="section-title-bar">
+                    <h2 class="section-title">Banker Information</h2>
+                </div>
+                <div class="section-content">
+                    <div class="left-column">
+                        <p>Name:</p>
+                        <p>Employee ID:</p>
+                        <p>Role:</p>
+                    </div>
+                    <div class="right-column">
+                        <p>John Smith</p>
+                        <p>123456</p>
+                        <p>Banker</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="section">
+                <div class="section-title-bar">
+                    <h2 class="section-title">Performance Metrics</h2>
+                </div>
+                <div class="section-content">
+                    <div class="left-column">
+                        <p>Customers Served:</p>
+                        <p>New Accounts Opened:</p>
+                        <p>Loan Applications:</p>
+                    </div>
+                    <div class="right-column">
+                        <p>50</p>
+                        <p>10</p>
+                        <p>5</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="section">
+                <div class="section-title-bar">
+                    <h2 class="section-title">Recent Activities</h2>
+                </div>
+                <div class="section-content">
+                    <h3 class="subtitle">Check out the latest updates and activities.</h3>
+                    <div class="btn-container">
+                        <a href="#" class="try-now-btn">View Details</a>
+                    </div>
+                </div>
+            </div>
+
+            <!--  section for viewing pending tasks-->
+            <!-- HTML -->
+            <style>
+                .subtitle2 {
+                    text-align: center;
+                    margin-top: 0;
+                }
+
+                .btn-container {
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+                    margin-top: 10px;
+                }
+
+                .try-now-btn {
+                    padding: 10px 20px;
+                    font-size: 16px;
+                    background-color: #4CAF50;
+                    color: white;
+                    border: none;
+                    border-radius: 4px;
+                    cursor: pointer;
+                }
+
+                .content-item {
+                    margin-bottom: 10px;
+                    padding: 10px;
+                    background-color: #ffffff;
+                    border-radius: 5px;
+                    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+                    width: 300px;
+                    text-align: center;
+                }
+
+                .content-item p {
+                    margin: 0;
+                }
+
+                .reward-message {
+                    font-weight: bold;
+                    color: #4CAF50;
+                }
+            </style>
+
+            <div class="section">
+                <div class="section-title-bar">
+                    <h2 class="section-title">Pending Tasks</h2>
+                </div>
+                <div class="section-content">
+                    <h3 class="subtitle2">View and complete pending tasks assigned to you.</h3>
+                    <div class="btn-container">
+                        <button id="view-tasks-btn" class="try-now-btn">View Tasks</button>
+                        <div id="pending-tasks"></div>
+                    </div>
+                </div>
+            </div>
+
+            <script>
+                var viewTasksBtn = document.getElementById('view-tasks-btn');
+                var pendingTasksDiv = document.getElementById('pending-tasks');
+                var tasks = [
+                    {
+                        title: 'Review Loan Application',
+                        priority: 'High'
+                    },
+                    {
+                        title: 'Call Customer for Account Verification',
+                        priority: 'Medium'
+                    },
+                    {
+                        title: 'Update Customer Information',
+                        priority: 'Low'
+                    }
+                ];
+                var tasksVisible = false; // Track the visibility state
+
+                viewTasksBtn.addEventListener('click', function () {
+                    if (tasksVisible) {
+                        pendingTasksDiv.innerHTML = ''; // Clear tasks
+                        tasksVisible = false;
+                    } else {
+                        pendingTasksDiv.innerHTML = ''; // Clear previous tasks
+                        if (tasks.length === 0) {
+                            var noTasksMessage = document.createElement('p');
+                            noTasksMessage.textContent = 'No pending tasks.';
+                            pendingTasksDiv.appendChild(noTasksMessage);
+                        } else {
+                            tasks.forEach(function (task) {
+                                var taskItem = createTaskItem(task);
+                                pendingTasksDiv.appendChild(taskItem);
+                            });
+                        }
+                        tasksVisible = true;
+                    }
+                });
+
+                function createTaskItem(task) {
+                    var taskItem = document.createElement('div');
+                    taskItem.className = 'content-item';
+
+                    var taskTitle = document.createElement('p');
+                    taskTitle.textContent = 'Task: ' + task.title;
+
+                    var taskPriority = document.createElement('p');
+                    taskPriority.textContent = 'Priority: ' + task.priority;
+
+                    var completeButton = document.createElement('button');
+                    completeButton.className = 'try-now-btn';
+                    completeButton.textContent = 'Complete';
+                    completeButton.addEventListener('click', function () {
+                        completeTask(task, taskItem);
+                    });
+
+                    taskItem.appendChild(taskTitle);
+                    taskItem.appendChild(taskPriority);
+                    taskItem.appendChild(completeButton);
+
+                    return taskItem;
+                }
+
+                function completeTask(task, taskItem) {
+                    var taskIndex = tasks.indexOf(task);
+                    if (taskIndex !== -1) {
+                        tasks.splice(taskIndex, 1); // Remove task from the list
+                        taskItem.remove(); // Remove task item from the DOM
+                    }
+                }
+            </script>
+            <!--end section  -->
+
+
+
+        </div>
+        </div>
+    </main>
+
+
+    <footer class="footer">
+        <div class="footer-content">
+            <p>&copy; 2023 Cilvcki Bank. All rights reserved.</p>
+        </div>
+    </footer>
+    <script src="BankerAccount.js"></script>
+</body>
+
+</html>
